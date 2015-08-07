@@ -1,0 +1,778 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Alexander J. Rivest and Ronald L. Rivest" />
+  <title>A simple photo workflow and backup guide</title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<div id="header">
+<h1 class="title">A simple photo workflow and backup guide</h1>
+<h2 class="author">Alexander J. Rivest and Ronald L. Rivest</h2>
+<h3 class="date">November 7, 2014</h3>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#introduction"><span class="toc-section-number">1</span> Introduction</a></li>
+<li><a href="#some-general-principles-strategies-and-assumptions"><span class="toc-section-number">2</span> Some general principles, strategies, and assumptions</a><ul>
+<li><a href="#storage-is-now-cheap."><span class="toc-section-number">2.1</span> Storage is now cheap.</a></li>
+<li><a href="#people-work-with-many-devices-smartphones-cameras-etc."><span class="toc-section-number">2.2</span> People work with many devices (smartphones, cameras, etc.)</a></li>
+<li><a href="#avoiding-lock-in-to-particular-hardware-or-software"><span class="toc-section-number">2.3</span> Avoiding ``lock-in'' to particular hardware or software</a></li>
+<li><a href="#backup-backup-backup"><span class="toc-section-number">2.4</span> Backup, backup, backup</a></li>
+<li><a href="#working-with-folders-of-pictures"><span class="toc-section-number">2.5</span> Working with folders of pictures</a></li>
+<li><a href="#assumptions-regarding-size-of-your-photo-library"><span class="toc-section-number">2.6</span> Assumptions regarding size of your photo library</a></li>
+</ul></li>
+<li><a href="#plan-and-prepare"><span class="toc-section-number">3</span> Plan and Prepare</a></li>
+<li><a href="#organizing-your-digital-photo-collection"><span class="toc-section-number">4</span> Organizing your digital photo collection</a><ul>
+<li><a href="#organizing-your-photo-library"><span class="toc-section-number">4.1</span> Organizing your photo library</a><ul>
+<li><a href="#getting-started"><span class="toc-section-number">4.1.1</span> Getting started</a></li>
+</ul></li>
+<li><a href="#organizing-principles"><span class="toc-section-number">4.2</span> Organizing principles</a></li>
+<li><a href="#naming-of-images"><span class="toc-section-number">4.3</span> Naming of images</a><ul>
+<li><a href="#modified-edited-images"><span class="toc-section-number">4.3.1</span> Modified (edited) images</a></li>
+<li><a href="#one-photo-is-one-file-usually"><span class="toc-section-number">4.3.2</span> One photo is one file (usually)</a></li>
+<li><a href="#sequences-of-photos"><span class="toc-section-number">4.3.3</span> Sequences of photos</a></li>
+</ul></li>
+<li><a href="#using-finder-to-sequence-a-set-of-photos"><span class="toc-section-number">4.4</span> Using Finder to sequence a set of photos</a></li>
+</ul></li>
+<li><a href="#taking-and-acquiring-pictures"><span class="toc-section-number">5</span> Taking and acquiring pictures</a><ul>
+<li><a href="#getting-ready"><span class="toc-section-number">5.1</span> Getting ready</a></li>
+<li><a href="#shooting-photos-with-a-digital-camera"><span class="toc-section-number">5.2</span> Shooting photos with a digital camera</a></li>
+<li><a href="#shooting-photos-on-iphone"><span class="toc-section-number">5.3</span> Shooting photos on iPhone</a></li>
+<li><a href="#taking-screenshots-on-iphone-or-laptop"><span class="toc-section-number">5.4</span> Taking screenshots on iPhone or laptop</a></li>
+<li><a href="#aquiring-an-image-from-a-text-message-or-email-attachment."><span class="toc-section-number">5.5</span> Aquiring an image from a text message or email attachment.</a></li>
+<li><a href="#converting-legacy-photos-from-other-systems-and-services"><span class="toc-section-number">5.6</span> Converting legacy photos from other systems and services</a></li>
+</ul></li>
+<li><a href="#lightoom"><span class="toc-section-number">6</span> Lightoom</a><ul>
+<li><a href="#lightroom-catalogs"><span class="toc-section-number">6.1</span> Lightroom Catalogs</a></li>
+</ul></li>
+<li><a href="#moving-photos-to-your-laptop"><span class="toc-section-number">7</span> Moving photos to your laptop</a><ul>
+<li><a href="#moving-photos-from-your-digital-camera-to-your-mac-laptop"><span class="toc-section-number">7.1</span> Moving photos from your digital camera to your mac laptop</a></li>
+<li><a href="#moving-photos-from-your-iphone-to-your-laptop"><span class="toc-section-number">7.2</span> Moving photos from your iPhone to your laptop</a></li>
+</ul></li>
+<li><a href="#editing-photos-on-your-laptop-with-lightroom."><span class="toc-section-number">8</span> Editing photos on your laptop with Lightroom.</a></li>
+<li><a href="#sharing-your-photos-with-others."><span class="toc-section-number">9</span> Sharing your photos with others.</a><ul>
+<li><a href="#displaying-photos-on-your-laptop-iphone-or-through-the-web."><span class="toc-section-number">9.1</span> Displaying photos on your laptop, iPhone, or through the web.</a><ul>
+<li><a href="#exporting-a-final-set-of-photos-from-lightroom."><span class="toc-section-number">9.1.1</span> Exporting a final set of photos from Lightroom.</a></li>
+<li><a href="#displaying-photos-on-mac-laptop-of-photos-stored-on-laptop-or-on-external-hard-drive."><span class="toc-section-number">9.1.2</span> Displaying photos on mac laptop of photos stored on laptop, or on external hard drive.</a></li>
+<li><a href="#slideshow-on-iphone"><span class="toc-section-number">9.1.3</span> Slideshow on iPhone</a></li>
+</ul></li>
+<li><a href="#sharing-photos-on-the-web-with-google-drive"><span class="toc-section-number">9.2</span> Sharing photos on the web (with Google Drive)</a></li>
+<li><a href="#organize-your-photos-into-folders-on-google-drive"><span class="toc-section-number">9.3</span> Organize your photos into folders on Google Drive</a></li>
+<li><a href="#share-folders-from-drive-through-google"><span class="toc-section-number">9.4</span> Share folders from Drive through Google+</a></li>
+<li><a href="#others-can-see-your-photos-that-youve-shared."><span class="toc-section-number">9.5</span> Others can see your photos that you've shared.</a></li>
+<li><a href="#how-to-make-title-slides-add-captions-add-maps"><span class="toc-section-number">9.6</span> How to make title slides, add captions; add maps</a></li>
+<li><a href="#uploading-photos-from-your-laptop-to-your-iphone"><span class="toc-section-number">9.7</span> Uploading photos from your laptop to your iPhone</a></li>
+<li><a href="#check-out-lightroom-5.7-synced-collections"><span class="toc-section-number">9.8</span> Check out Lightroom 5.7 Synced collections</a></li>
+</ul></li>
+<li><a href="#backing-up-and-storing-your-photos."><span class="toc-section-number">10</span> Backing up and storing your photos.</a><ul>
+<li><a href="#a-backup-plan-to-follow"><span class="toc-section-number">10.1</span> A backup plan to follow</a><ul>
+<li><a href="#time-machine"><span class="toc-section-number">10.1.1</span> Time Machine</a></li>
+<li><a href="#dropbox"><span class="toc-section-number">10.1.2</span> Dropbox</a></li>
+<li><a href="#crashplan"><span class="toc-section-number">10.1.3</span> Crashplan</a></li>
+<li><a href="#manual-backups"><span class="toc-section-number">10.1.4</span> Manual backups</a></li>
+<li><a href="#manually-making-a-backup-copy-of-a-folder"><span class="toc-section-number">10.1.5</span> Manually Making a backup copy of a folder</a></li>
+<li><a href="#chronosync"><span class="toc-section-number">10.1.6</span> ChronoSync</a></li>
+</ul></li>
+<li><a href="#verifying-that-a-copy-operation-operated-correctly"><span class="toc-section-number">10.2</span> Verifying that a copy operation operated correctly</a></li>
+</ul></li>
+<li><a href="#when-you-outgrow-your-laptop"><span class="toc-section-number">11</span> When you outgrow your laptop</a><ul>
+<li><a href="#splitting-your-photos-abc-one-folder-into-two-parts"><span class="toc-section-number">11.1</span> Splitting your &quot;<code>photos-abc-one</code>&quot; folder into two parts</a></li>
+</ul></li>
+<li><a href="#other-tips-tricks-and-notes"><span class="toc-section-number">12</span> Other tips, tricks, and notes</a></li>
+<li><a href="#acknowledgments"><span class="toc-section-number">13</span> Acknowledgments</a></li>
+<li><a href="#references"><span class="toc-section-number">14</span> References</a></li>
+<li><a href="#things-we-tried-that-we-liked-but-which-arent-part-of-our-recommended-workflow"><span class="toc-section-number">15</span> Things we tried that we liked but which aren't part of our recommended workflow</a><ul>
+<li><a href="#uploading-your-photos-to-google-drive"><span class="toc-section-number">15.1</span> Uploading your photos to Google Drive</a></li>
+<li><a href="#photomechanic"><span class="toc-section-number">15.2</span> Photomechanic</a></li>
+</ul></li>
+<li><a href="#things-we-tried-that-were-not-recommending-this-section-may-be-ignored-deleted"><span class="toc-section-number">16</span> Things we tried that we're not recommending (this section may be ignored / deleted)</a><ul>
+<li><a href="#sync-folders-pro."><span class="toc-section-number">16.1</span> Sync Folders Pro.</a></li>
+<li><a href="#phoneview"><span class="toc-section-number">16.2</span> PhoneView</a></li>
+<li><a href="#iphone-photostream-and-icloud."><span class="toc-section-number">16.3</span> iPhone Photostream and iCloud.</a></li>
+</ul></li>
+</ul>
+</div>
+<!-- Note to authors: comments can be written like this, 
+     within an html comment tag. 
+-->
+
+<p></p>
+<h1 id="introduction"><span class="header-section-number">1</span> Introduction</h1>
+<p>We give some tips on taking or receiving photos, editing them, sharing them, and backing them up.</p>
+<p>This note is for family and friends who are reasonably serious amateur photographers, who might appreciate a few tips on navigating the somewhat confusing world of taking, editing, managing, and sharing photos.</p>
+<p>We describe one way to organize matters; we don't try to be comprehensive.</p>
+<p>This note is idiosyncratic: it reflects the equipment we prefer: a digital camera (such as a Canon DSLR), an iPhone (or iPad), and a mac laptop.</p>
+<p>The landscape of photography options is rapidly changing. There are many good approaches, and new tools and options keep appearing. (For example, Apple is discontinuing support for Aperture, and will soon introduce a new Photos app.) We hope some of the tips given here will be useful to you.</p>
+<p>The main topics are:</p>
+<ol style="list-style-type: decimal">
+<li><p><em>Acquiring</em> pictures from a digital camera, a smartphone, via email, or messaging.</p></li>
+<li><p><em>Organizing</em> your digital photo collection. How to organize your photos into folders, how to name your folders and pictures.</p></li>
+<li><p><em>Moving</em> photos to a laptop (e.g., by plugging SD card into laptop, or using ImageCapture (Apple) or Photo Transfer to move photos between iPhone and laptop).</p></li>
+<li><p><em>Editing</em> photos on laptop (using Lightroom).</p></li>
+<li><p><em>Sharing</em> photos using email, messages, or Google+, or by displaying them on your iPhone or laptop.</p></li>
+<li><p><em>Backing</em> <em>up</em> photos using external hard drives and/or an online backup service.</p></li>
+<li><p><em>Expanding</em> to use external hard drives when your photo collection exceeds the storage capacity of your laptop.</p></li>
+</ol>
+<h1 id="some-general-principles-strategies-and-assumptions"><span class="header-section-number">2</span> Some general principles, strategies, and assumptions</h1>
+<h2 id="storage-is-now-cheap."><span class="header-section-number">2.1</span> Storage is now cheap.</h2>
+<p>You can buy 2TB (two terabyte) external hard drives for under $200. Monthly fees for 1TB online storage are around $10.</p>
+<h2 id="people-work-with-many-devices-smartphones-cameras-etc."><span class="header-section-number">2.2</span> People work with many devices (smartphones, cameras, etc.)</h2>
+<p>You don't just have one camera anymore. You have a phone or two, a laptop or two (that can take pictures), maybe an iPad, and of course a SLR or maybe two.</p>
+<p>You also have more than one display device; you may wish to display your best pictures to your friends using your laptop, their laptop, your iPhone, or your iPad.</p>
+<p>This proliferation of devices makes designing a &quot;workflow&quot; for managing pictures challenging.</p>
+<h2 id="avoiding-lock-in-to-particular-hardware-or-software"><span class="header-section-number">2.3</span> Avoiding ``lock-in'' to particular hardware or software</h2>
+<p>Products or online services may fail in the market or be abandoned by their provider. Users may be left hanging. As a recent example, Apple has decided to close down its Aperture product, leaving some users unhappy:</p>
+<pre><code>&lt;http://www.zdnet.com/apple-orphans-aperture-imaging-pros-unhappy-7000031047/&gt;</code></pre>
+<p>So, you should be nimble and not dependent on any one product or service.</p>
+<p>That said, we are big fans of Lightroom, and recommend a workflow that emphasizes its use.</p>
+<h2 id="backup-backup-backup"><span class="header-section-number">2.4</span> Backup, backup, backup</h2>
+<p>A good backup strategy, followed with discipline, is essential. Our (mildly paranoid) approach relies on Time Machine, Dropbox, Crashplan and external hard drives just for backing up photos.</p>
+<h2 id="working-with-folders-of-pictures"><span class="header-section-number">2.5</span> Working with folders of pictures</h2>
+<ul>
+<li><p>We assume that you will keep your pictures organized in <em>folders</em>.</p></li>
+<li><p>We suggest rules for naming folders and images.</p></li>
+</ul>
+<h2 id="assumptions-regarding-size-of-your-photo-library"><span class="header-section-number">2.6</span> Assumptions regarding size of your photo library</h2>
+<ul>
+<li><p>We assume to begin with that you have a photo collection that fits entirely into one folder called &quot;<code>photos-abc-one</code>&quot; on your laptop.</p></li>
+<li><p>Later on, we discuss how to create a folder &quot;<code>photos-abc-two</code>&quot; on an external hard drive to store less-frequently-used folders of photos, once your photo collection exceeds what you can store on your laptop.</p></li>
+<li><p>We assume that you are comfortable using external hard drives and also an online storage services (like Dropbox and Crashplan) for backup.</p></li>
+</ul>
+<p></p>
+<h1 id="plan-and-prepare"><span class="header-section-number">3</span> Plan and Prepare</h1>
+<ul>
+<li><p>Get camera, iPhone, laptop</p></li>
+<li><p>Purchase Lightroom (aka Adobe Photoshop Lightroom 5).</p>
+<p>Lightroom is made by Adobe, and can be purchased for download online from Amazon or Adobe for about $130.</p></li>
+<li><p>We'll use initials for your identification. In our examples, we'll use initial &quot;<code>abc</code>&quot; to illustrate (as if your name was Alice B. Charming); <strong>please replace &quot;<code>abc</code>&quot; with your own initials in our suggestions</strong>.</p></li>
+<li><p>Get a Dropbox account; this will be used for backing up online your <code>photos-abc-one</code> folder from your laptop.</p></li>
+<li><p>Get a Crashplan account for backups. This is primarily for backing up online the <code>photos-abc-two</code> folder on your external hard drive. You won't need this capability until your photo collection exceeds what you can store on your laptop.</p></li>
+<li><p>Purchase three or four external hard drives (one for Time Machine backups, one for your <code>photos-abc-two</code> folder if you have a lot of photos, and two for backups. We recommend 2TB drives (two terabytes per drive).</p></li>
+</ul>
+<p></p>
+<h1 id="organizing-your-digital-photo-collection"><span class="header-section-number">4</span> Organizing your digital photo collection</h1>
+<h2 id="organizing-your-photo-library"><span class="header-section-number">4.1</span> Organizing your photo library</h2>
+<h3 id="getting-started"><span class="header-section-number">4.1.1</span> Getting started</h3>
+<ul>
+<li><p>Get a Dropbox account with a large amount of storage (even one terabyte is not so expensive). The amount of storage should be enough to hold all of the pictures stored on your laptop.</p>
+<p>Once you set up your Dropbox account, you will have a folder &quot;Dropbox&quot; in your home directory.</p></li>
+<li><p>Create a new folder called <code>photos-abc-one</code> in your Dropbox directory. This will be your main working folder for your photos. (Again, replace &quot;<code>abc</code>&quot; with your own initials.)</p></li>
+<li>In this new <code>photos</code> folder, create at least the following subfolders:
+<ul>
+<li><code>shoebox</code> -- for folders of photos from legacy systems (i.e. before you got going with the new naming system proposed here)</li>
+<li><code>library</code> -- for folders of photos that follow the naming schemes proposed here, but which are not managed by lightroom</li>
+<li><code>lightroom</code> -- for folders of photos that are managed by lightroom</li>
+<li><code>lightroom-catalog</code> -- for your lightroom catalog</li>
+<li><code>show</code> -- for folders of photos you would like to show to others</li>
+<li>'from-others' -- pictures, folders etc that you did not take, but that you have and want as part of your photo collection</li>
+<li>'sync-with-iphone' -- you can have all of your iphone pictures sync to this folder</li>
+</ul></li>
+<li><p>Take a new hard drive, and rename it (using Finder) <code>photos-abc-one-two-backup</code>. (where &quot;<code>abc</code>&quot; is your initials).</p>
+<p>To do this, open up a Finder window, then find the hard drive under &quot;Devices&quot; on the left panel. Control-click on the disk name, then select &quot;Get Info&quot;. This will pop up a new panel where you can edit the name of the disk drive in the &quot;Name &amp; Extension&quot; box.</p>
+<p>This drive will be a backup drive for <em>both</em> your laptop folder <code>photos-abc-one</code> and also (if you have it) your external hard drive folder <code>photos-abc-two</code>.</p>
+<p>You can initialize a second drive for backups as <code>photos-abc-one-two-backup-2</code>.</p></li>
+<li><p>Organize your legacy photos into shoebox</p>
+<p>Take all of your &quot;legacy&quot; photo folders, and move them into the <code>photos-abc-one/shoebox</code> folder on your laptop. By legacy, we are referring to all of the scattered picture folders, individual pictures and snapshots that are scattered around your hard drive. Put them all in one place. We are calling this place the 'shoebox' (If you need to create an annex on a hard drive, put some or all of the legacy folders into `photos-abc-two/shoebox&quot; folder.)</p></li>
+<li><p>Make a copy of your <code>photos-abc-one</code> folder (from your laptop) and your <code>photos-abc-two</code> folder (if you have one, from your hard drive) onto your external hard drive <code>photos-abc-one-two-backup</code>.</p></li>
+<li><p>Start backing up</p></li>
+</ul>
+<p>Get a Crashplan account, and make sure it backs up both your <code>photos-abc-one</code> folder from your laptop, and your and your <code>photos-abc-two</code> folder from your <code>photos-abc-two</code> external hard drive (if you have one).</p>
+<h2 id="organizing-principles"><span class="header-section-number">4.2</span> Organizing principles</h2>
+<p>We recommend the following principles:</p>
+<ul>
+<li><p><strong>Each folder of photos must have a globally unique name</strong>.</p>
+<p>(Its name is different from the name of any other folder of photos. By &quot;folder of photos&quot; we mean a folder just containing photos, not a higher-level folder itself containing folders.)</p></li>
+<li><p><strong>Each individual photo must have a globally unique name</strong>,</p>
+<p>If you crop or edit and then save a photo, the result will have its own unique name, different than the name of the original photo.</p>
+<p>If two files have the same name, then they must contain the same photo. (You may have copies of the same photo in different folders; the copies will have the same name.)</p></li>
+<li><p><strong>Whatever you do, <em>be</em> <em>consistent</em> in how you name files and folders.</strong></p></li>
+<li><p><strong>Start names of folders and photos with a date in one of the following three formats: <code>yyyy</code>, <code>yyyy-mm</code>, or <code>yyyy-mm-dd</code>.</strong></p>
+<p>The date indicates the date a photo was taken, or at least the date the first photo in a folder of photos was taken.</p></li>
+<li><p>Following the date, names of folders and photos will have a sequence of words or tags, separated by hyphens. Names of photos and folders will contain no blanks. They will contain only lower-case letters, digits, and hyphens. (They may also contain a single period to introduce the file extension, as in <code>2011-nyc-045.jpg</code>.)</p>
+<p>You may also wish to include your own name or initials in the original folder name if you'll be working with photos from more than one individual (e.g. a family vacation). So, you might have two original folders:</p>
+<blockquote>
+<p><code>2014-10-10-rlr-red-sox-orig</code></p>
+</blockquote>
+<blockquote>
+<p><code>2014-10-10-ajr-red-sox-orig</code></p>
+</blockquote>
+<p>We recommend using a separate original folder for photos from different cameras, even if they are for the same event. You can include a tag indicating the camera, such &quot;<code>eos</code>&quot; (for canon eos), or &quot;ip&quot; (for iphone). Thus, you might have two original folders:</p>
+<blockquote>
+<p><code>2014-08-05-rlr-eos-nyc-orig</code></p>
+</blockquote>
+<blockquote>
+<p><code>2014-08-05-rlr-ip-nyc-orig</code></p>
+</blockquote></li>
+<li><p>Original folders have batches of photos as they were imported from your camera or iphone. Such folders are <em>immutable</em>---they are static and never changed.</p></li>
+<li><p>Working folders typically start off as copies of original folders, and then are edited to produce a desired set of final images. A working folder may become a final folder once work on it is finished.</p></li>
+<li><p>Final folders are collections of photos meant for sharing or display. A final folder is also static and immutable. We recommend using suffixes such as &quot;<code>-best</code>&quot; or &quot;<code>show</code>&quot; for your final folders, but you may also just have no suffix, since you may export this show to be stored under photos-abc-one/show, whereas the originals would exist under photos-abc-one/library or photos-abc-one/shoebox</p>
+<p>Thus an original folder of the form</p>
+<blockquote>
+<p><code>2014-07-03-rlr-yellowstone</code></p>
+</blockquote>
+<p>may have associated final folders containing selected copies of the best photos or of edited or modified photos, such as</p>
+<blockquote>
+<p><code>2014-07-03-rlr-yellowstone-final</code></p>
+</blockquote>
+<blockquote>
+<p><code>2014-07-03-rlr-yellowstone-best</code></p>
+</blockquote>
+<blockquote>
+<p><code>2014-07-03-rlr-yellowstone-black-and-white</code></p>
+</blockquote>
+<p>You might have a final folder of edited photos called</p>
+<blockquote>
+<p><code>2014-yellowstone-bison-best</code></p>
+</blockquote>
+<p>such the corresponding original photos are in two folders</p>
+<blockquote>
+<pre><code>`2014-07-02-yellowstone`</code></pre>
+</blockquote>
+<blockquote>
+<pre><code>`2014-07-03-yellowstone`</code></pre>
+</blockquote></li>
+</ul>
+<!-- ![Example of Folder Naming](pics/folder_naming.jpg) -->
+
+<h2 id="naming-of-images"><span class="header-section-number">4.3</span> Naming of images</h2>
+<p>Thus, when you first create original folders, the original photos should be given their unique names at that time.</p>
+<p>We recommend that an original photo be given a name consisting of:</p>
+<ul>
+<li><p>the name of its original folder</p></li>
+<li><p>a hyphen</p></li>
+<li><p>a sequence number or frame number that increases throughout the batch of photos in that folder.</p>
+<p>We recommend using &quot;frame numbers&quot;---the four-digit numbers given by the camera when the picture is taken.</p>
+<p>For example, the camera might give a photo the name</p>
+<blockquote>
+<p><code>IMG_0214.JPG</code></p>
+</blockquote>
+<p>After import, this photo is placed in folder <code>2014-cape-cod</code> and given the name</p>
+<blockquote>
+<p><code>2014-cape-cod-0214.jpg</code></p>
+</blockquote>
+<p>(Don't rename files when importing them into lightroom; do this after they are imported, so lightroom will remember the original file name correctly.)</p>
+<p>In a few cases, when the camera numbering has &quot;wrapped around&quot;, you may wish to Edit the import template to give you &quot;(Custom Text)&quot; followed by &quot;(Sequence # (001)&quot; instead of &quot;Original File Number&quot; to get a sequence of numbers that increases properly without wraparound.</p>
+<p>This naming method allows you to easily associate an original photo with the folder of originals it came from.</p></li>
+</ul>
+<h3 id="modified-edited-images"><span class="header-section-number">4.3.1</span> Modified (edited) images</h3>
+<pre><code>Modified images can have additional tags.  For example, a
+modified version of the above that is black and white might be named:
+
+&gt; `2014-cape-cod-0214-bw.jpg`</code></pre>
+<h3 id="one-photo-is-one-file-usually"><span class="header-section-number">4.3.2</span> One photo is one file (usually)</h3>
+<p>Usually, a single photo is stored in a single file. This file contains not only the image, but also various metadata associated with the picture.</p>
+<p>However, certain file formats---in particular, raw file formats---are not capable of storing all the types of metadata that one may wish to store with an image. Thus, for such file formats, a <em>second</em> `<code>sidecar'' file is often used to store the metadata.  This second file usually has an &quot;</code>.xmp`&quot; file extension. Thus, an image might be represented as two files:</p>
+<blockquote>
+<p><code>2014-nyc-001.tiff</code>, and</p>
+</blockquote>
+<blockquote>
+<p><code>2014-nyc-001.xmp</code> .</p>
+</blockquote>
+<p>You should always keep these two files together.</p>
+<p><strong>If you shoot in jpeg format, this issue of &quot;sidecar&quot; files shouldn't arise.</strong></p>
+<h3 id="sequences-of-photos"><span class="header-section-number">4.3.3</span> Sequences of photos</h3>
+<p>We may wish to enforce a certain sequence of photos in a final folder. (Other than chronological.) We suggest doing this by using a fixed-length sequence number <em>prefix</em> to the original photo name. For example, you might have the following three-photo slide sequence in a final folder:</p>
+<blockquote>
+<p><code>001-2014-07-05-yellowstone-045.jpg</code></p>
+</blockquote>
+<blockquote>
+<p><code>002-2014-05-05-maine-004.jpg</code></p>
+</blockquote>
+<blockquote>
+<p><code>003-2011-cape-cod-071.jpg</code></p>
+</blockquote>
+<p>This convention allows the photos to be shown in the desired order, if they are shown in order by file name.</p>
+<p>We note that the Lightroom &quot;Export&quot; functionality supports putting such sequence numbers at the front when exporting. So, you can work with a working folder, getting the photos in the order you care about (Lightroom manages order-keeping for you), and then exporting the working folder to a final folder with Lightroom Export, putting prefix sequence numbers in at the export stage.</p>
+<h2 id="using-finder-to-sequence-a-set-of-photos"><span class="header-section-number">4.4</span> Using Finder to sequence a set of photos</h2>
+<p>OS X Yosemite will be a bit more photographer-friendly:</p>
+<p>&quot;And for those that end up dealing with lots of files, like photographers, there’s now an easy way to batch rename files using Finder. Just open up Finder, select the group of files you want to rename, then select “Rename items” from the pop-up menu. From there, select Format from the dropdown menu on the left, and then select the name format for the files—the text you want them named, plus a number appended to the end that increments for each file. For example, this lets me name a series of screenshots I’ve taken YosemiteImage1, YosemiteImage2, and so on.&quot; ( Quote from Gadget Lab, <a href="http://www.wired.com/2014/09/os-x-yosemite-settings/">http://www.wired.com/2014/09/os-x-yosemite-settings/</a>, 2014-09-12. )</p>
+<p></p>
+<h1 id="taking-and-acquiring-pictures"><span class="header-section-number">5</span> Taking and acquiring pictures</h1>
+<ul>
+<li><p>This section discusses the various ways you can acquire photos (DSLR camera, iPhone, screenshots, messaging, email, conversion from legacy systems like iPhoto, scanning old prints and slides).</p></li>
+<li><p>Initial editing</p>
+<p>By &quot;initial editing&quot;, we mean simple editing tasks that can be performed when you acquire the photo, such as deletion of unwanted photos and simple cropping.</p>
+<p>The Snapseed app on an iPhone provides some excellent initial editing capabilities.</p>
+<p>Get rid of really bad photos right away. If a photo is so bad that you're sure you would never want to share it, even if it were the only photo available, then delete it right away; there is no point in keeping it around.</p>
+<p>But don't initially delete photos just because you think you have a better one. Perhaps the other one isn't really in crisp focus, or is landscape mode rather than portrait mode, or has other possible benefits. Storage is cheap, so when it doubt, don't delete an original photo.</p></li>
+</ul>
+<h2 id="getting-ready"><span class="header-section-number">5.1</span> Getting ready</h2>
+<ul>
+<li><p>Make sure your camera or iPhone lens is clean! It is easy to get fingerprints on your iPhone lens.</p></li>
+<li><p>Make sure that your camera or iPhone has the correct date and time. This can be an issue when you are traveling, and when you are shooting with more than one camera and will later want to merge photos chronologically.</p></li>
+<li><p>Keep your DSLR sensor clean by removing any spots on it. If you change lenses often, it is likely that some dirt or dust will get onto your sensor. This will prevent light from hitting that part of the sensor and cause a “spot” to show up in the same place on every image you take.</p>
+<p>Prior to any trip, test whether your camera's sensor is clean. To do this, set the camera to manual focus, focus on something far away, and take a picture of a clear blue sky (or clean white wall). Zoom into the image to see if there are any “spots.” if you do not have any spots, you are good to go.</p>
+<p>If you do notice spots, first use the camera’s menu and clean the sensor:</p>
+<div class="figure">
+<img src="pics/cleansensor.jpg" alt="Sensor Cleaning" /><p class="caption">Sensor Cleaning</p>
+</div>
+<p>After that process has been completed, repeat the test by taking a new picture of the blue sky or white wall. You can repeat this a few times and generally, this process will clean the sensor.</p>
+<p>Should this not work, you can either take the camera to a local professional to clean your sensor, or you can do it <em>carefully</em> yourself.</p>
+<p>To clean the sensor yourself, we recommend first buying the <a href="http://www.amazon.com/Giottos-AA1900-Rocket-Blaster-Large/dp/B00017LSPI/ref=sr_1_1?ie=UTF8&amp;qid=1409560594&amp;sr=8-1&amp;keywords=Rocket+Air+Blower">Rocket Air Blaster</a>, which costs approximately $10 on Amazon and we recommend buying <a href="http://www.amazon.com/Sensor-Swab-Type-Box-12/dp/B0029WUKVG/ref=sr_1_1?ie=UTF8&amp;qid=undefined&amp;sr=8-1&amp;keywords=sensor+swab">“Sensor Swab’s”</a> that match the proper size of your sensor. ** note that sensors swabs are made of differing sizes for different sensor sizes.</p>
+<p>Before you start, know that after you choose the “Clean Manually” option in the menu shown above, the mirror will open up, exposing the sensor to you. To clean the sensor, you must first remove your lens. During this time, if you are in a dusty or dirty environment, you risk getting more dirt on your sensor. Additionally, once you start using sensor swabs, you run the risk of damaging your sensor. Because of this, we recommend first using the Rocket Air Blaster, and shooting air into the sensor area (<em>not touching anything</em>). Blast some air at the sensor, then <em>turn off your camera</em> to close the mirror, <em>reattach</em> your lens, and then take additional test shots of a blue sky or white wall.</p>
+<p>IF and <em>only if</em> the (1) automatic sensor cleaner and (2) Rocket Air Blaster methods do not work to remove your spot, should you even consider using the Sensor Swab.</p>
+<p>Once the spots on your camera's sensor are removed, you will take much better pictures!</p></li>
+</ul>
+<h2 id="shooting-photos-with-a-digital-camera"><span class="header-section-number">5.2</span> Shooting photos with a digital camera</h2>
+<ul>
+<li><p>We assume you have a Canon digital camera or the equivalent.</p></li>
+<li><p>We recommend shooting your pictures in the highest-quality jpeg format that you can. (This may be labelled as &quot;(L)&quot; on your camera, since the resulting files are larger than for other more highly-compressed jpeg formats.)</p>
+<p>Many professional photographers instead shoot in &quot;raw&quot; mode. We do not recommend raw mode here, because it adds additional complications to the workflow. Also, raw format will take up significantly more space on any storage device and you may need special programs to open the raw files (for example, the “Preview” program on a MAC will not open these files). In addition, raw format photos may need a second &quot;sidecar&quot; xmp data file to carry metadata. Nonetheless, shooting in raw format may enable you to produce higher-quality results, as the resulting raw format is not compressed or otherwise manipulated by the camera. If you are willing to put in the extra effort, shooting in raw format may be worth it for you. But for the intended audience of this note, we don't feel that it will be worth the extra complexity in the workflow.</p></li>
+<li><p>Although your DSLR probably doesn't have a GPS unit (yet), you can get GPS coordinates for your DSLR photos by using a iPhone app called &quot;MotionX GPS&quot; <a href="http://gps.motionx.com/">http://gps.motionx.com/</a> . If you are interested in GPS tagging each of your photos so you can look back at the exact spot on a map where you took them, we recommend following the instructions on this video:</p>
+<p><a href="http://www.learnr.pro/view/video/34797-using-gpx-log-files-in-lightroom-4-to-geotag-your-photos">http://www.learnr.pro/view/video/34797-using-gpx-log-files-in-lightroom-4-to-geotag-your-photos</a></p>
+<p>You will be using your smartphone to keep a log of the GPS coordinates. The most important thing to do is to synchronize the clock on your camera with the clock on your cellphone.</p>
+<p>When you are ready to go out and explore, simply open the MotionX-GPS App, and under “Menu” select “Record Track,” and hit “Start.” You will leave this running as long as you want GPS information for. Go about your day taking pictures with your DSLR. When you have finished your shoot, re-open the MotionX-GPS App, hit “Pause” and then “Save.” The next page will say something like “Track 001” or something. You can name that whatever you want. We suggest naming it something that recalls the day, event or location. To rename, just click on the text saying “Track 001” and rename.</p>
+<p>Then hit the button for “Share this Track” and you can then email the file to yourself. To do this, towards the bottom of the page, enter your email address, then click on the Green “Share” button.</p>
+<p>Access your email from the computer that you use Lighroom in and download the .gpx file to a location you will know later.</p>
+<p>In Lightroom, import or open the folder containing the pictures you took while your MotionX-GPS was running. Then click on the “Map” button in Lightroom. Under the map in the middle, there is a menu icon (looks like a ~ with sharper edges), which you should click on and choose “Load Tracklog.” Now, choose the .gpx file that is associated with your trip.</p>
+<p>A blue line will show up on the map showing your route. Now, make sure the time-zone offset is the same (if you had been traveling and not reset or synchronized your camera and phone clocks. This menu option is in the same menu that had “Load Tracklog.”</p>
+<p>Select your photos and then under the same menu, choose “Auto-tag XX selected photos” – a feature will come up asking you to “Enable Reverse Geocoding” – Enable this. Hit ok, and now your photos will contain meta-data about your location.</p>
+<p>Practice this once before attempting in a place you think it is important.</p>
+<p>This is explained here:</p>
+<blockquote>
+<p><a href="http://www.cultofmac.com/153451/how-to-use-your-iphone-and-lightroom-to-geotag-photos-video/">http://www.cultofmac.com/153451/how-to-use-your-iphone-and-lightroom-to-geotag-photos-video/</a></p>
+</blockquote></li>
+<li><p>As for initial editing: you may wish to delete photos that are obviously going to be unwanted. Delete any photos you would never want to show anyone else or see again yourself. Delete photos for which you have also taken an obviously better photo. (But be careful a bit here, sometimes you can't tell on a camera review screen which photo is better, and sometimes you may want to keep several shots of a given event, in case you prefer one format (landscape or portrait) better than another, or in case you think your judgment for the composition might change.)</p></li>
+<li><p>Your photos end up on your SD or CF card.</p></li>
+</ul>
+<h2 id="shooting-photos-on-iphone"><span class="header-section-number">5.3</span> Shooting photos on iPhone</h2>
+<ul>
+<li><p>You can use regular Camera app. Photos end up in the &quot;Camera Roll&quot; folder, with a filename of the form IMG_nnnn.JPG (where nnnn is a four-digit sequence number. (You normally don't see the filenames in the iPhone display, but you will see them if you use the Photo Transfer app described later.)</p></li>
+<li><p>You can alternatively use the recommended Camera+ app, available here: <a href="http://campl.us/">http://campl.us/</a> on at the Apple App Store on iTunes. This app extends the capabilities of the basic Camera app in multiple ways. ****** SUCH AS? *****</p></li>
+<li><p>There are a number of photo-editing apps available on the iPhone; we recommend Snapseed. Snapseed was purchased by Google in 2012; the Snapseed editor can be downloaded for use on your iPhone, but it is also integrated into Google+. A Snapseed guide is <a href="https://support.google.com/snapseed/?hl=en#topic=3110875">here</a>.</p></li>
+<li><p>We recommend not shooting with a filter initially. Better to take the picture as it exists and then add filters later. This will give you more flexibility. [Explain what it means to shoot with a filter.]</p></li>
+<li><p>If you edit with the Photos app on the iPhone, the edit looks like it replaces the original, but it doesn't really, and if you export to somewhere else, you may get the original and not the edited version??? (experiment?) [Snapseed doesn't do this; it creates a new photo in your Camera Roll.] Note that you can edit a photo with iPhone Camera, and then &quot;undo&quot; the edits (e.g. a crop) later !!?</p></li>
+<li><p>This is all changing a lot, soon, with ios8:</p>
+<blockquote>
+<p><a href="http://thenextweb.com/creativity/2014/09/17/ios-8-breathes-new-life-older-iphone-camera-photos-apps/">http://thenextweb.com/creativity/2014/09/17/ios-8-breathes-new-life-older-iphone-camera-photos-apps/</a></p>
+</blockquote>
+<p>(Discuss changes...)</p></li>
+</ul>
+<h2 id="taking-screenshots-on-iphone-or-laptop"><span class="header-section-number">5.4</span> Taking screenshots on iPhone or laptop</h2>
+<ul>
+<li><p>Only take a screenshot if you have no other option.</p>
+<p>Taking screen shoots is good for certain situations (like capturing a FaceTime moment), but is a poor way to move a photo from one place to another, since the resolution is limited.</p></li>
+<li><p>Taking a screenshot on your mac laptop</p>
+<p>You can take a screenshot on mac os x by pressing command-shift-3. Or, use command-shift-4 to bring up a cursor allowing you to select a more specific part of the screen and take an image of that. After you do this operation, the copy of your screenshot is being held in memory. To make it into a file, open the “Preview” app on the Mac, and under “File,” select “New from Clipboard” this will then bring your screen shot up on that screen. You can then save that file with whatever name you choose and to whatever location you want. <strong>Note: you can only do ONE screenshot at a time</strong></p></li>
+<li><p>Taking a screenshot on your iPhone</p>
+<p>You can take a <em>screenshot</em> at any time, by pressing the Home and Sleep buttons at the same time, then releasing them. A photo of the current screen will be placed in your Camera Roll, just as if you had taken a photo with the built-in iPhone camera. (The Home button is the circular one beneath the screen, the Sleep button is the same as the Power button on the top side of the iPhone.) The photo has a filename of the form IMG_nnnn.JPG.</p></li>
+</ul>
+<h2 id="aquiring-an-image-from-a-text-message-or-email-attachment."><span class="header-section-number">5.5</span> Aquiring an image from a text message or email attachment.</h2>
+<ul>
+<li><p>Using your iphone</p>
+<p>From your iPhone, you can save such photos by clicking on the photo and then clicking on &quot;Save Image&quot;. This is equivalent to taking a picture with the camera; it puts the picture both into your Camera Roll (and into your Photostream, if you have PhotoStream turned on).</p>
+<div class="figure">
+<img src="pics/savefromtext.jpg" alt="How to Save from a Text Message" /><p class="caption">How to Save from a Text Message</p>
+</div>
+<p>(Interestingly, if you save it multiple times, it will appear multiple times in your Camera Roll, but only once in your PhotoStream.)</p>
+<p>You may want to set up a recurring weekly reminder to save photos from your messages and emails into your Camera Roll.</p>
+<p>We recommend, if you like the photo, that you save it IMMEDIATELY to your camera roll. If you delay and want to revisit that photo later, it can be very time consuming to go through old text messages to find it. Make a habit of saving pictures sent to you, that you may want later.</p></li>
+<li><p>Using your mac</p>
+<p>For an email received as an attached image to an email, you can download the message (click on the attachment, then click on the down-arrow in gmail), then double-click on the downloaded file (at the bottom left of the browser screen) to open the image in Preview. From Preview, you can &quot;Export&quot; the image to a folder of your choice.</p>
+<p>You can use Messages similarly to handle images received via text messages or iMessage.</p></li>
+</ul>
+<h2 id="converting-legacy-photos-from-other-systems-and-services"><span class="header-section-number">5.6</span> Converting legacy photos from other systems and services</h2>
+<ul>
+<li><p>One of our principles of these guidelines is to avoid getting yourself &quot;locked in&quot; to the products or services of any single vendor, especially those that try to do everything for you, including storing and managing your photos. (For some people, such products and services may be just right, but it is not the path we recommend.)</p>
+<p>Thus, we recommend that you export your photos and videos from iPhoto, Aperture, Picasa, or other services.</p></li>
+<li><p>Exporting photos from iPhoto</p>
+<p>Be sure to export the photos as &quot;originals&quot; (not jpegs). If you have videos (avi, mp4, mov, etc.), you may need to first use Aperture to access the iPhoto library, and then export the originals (to avoid an iPhoto bug causing only the first frame of each video to be exported).</p></li>
+<li><p>Exporting photos from Aperture</p>
+<p>We note that Apple is phasing out Aperture, <a href="http://www.macworld.com/article/2375212/apple-retires-aperture-and-iphoto-to-be-replaced-with-photos-for-os-x.html">to be replaced by a new &quot;Photos for OS X&quot; in 2015</a></p>
+<p>There is a new <a href="http://appleinsider.com/articles/14/08/04/adobe-publishes-how-to-guide-for-migrating-from-apples-aperture-to-lightroom">guide by Adobe</a> on how to get your photos out of Aperture and into Lightroom. (Given Aperture's imminent demise, we view this as a good move for you to take if you have photos stored in Aperture.)</p>
+<p>Note that this may create some XMP sidecar files. (Discuss sidecar files somewhere!!)</p></li>
+<li><p>Exporting photos from online services</p></li>
+<li><p>Scanning old prints and slides.</p>
+<ul>
+<li><p>Use a service! (Local or online) Try <a href="http://www.scancafe.com/">http://www.scancafe.com/</a> .</p></li>
+<li><p>You can find someone local to help you with organizing your old photos (print or digital) by going to the web site of the Association of Personal Photo Organizers <a href="http://www.appo.org/">http://www.appo.org/</a> (Yes, there really is such an organization.) They have a certification program, so you can have confidence in the quality of the work done.</p></li>
+</ul></li>
+</ul>
+<p></p>
+<h1 id="lightoom"><span class="header-section-number">6</span> Lightoom</h1>
+<p>Our recommended workflow makes extensive use of Lightroom. This section gives some high-level perspective on using Lightroom.</p>
+<p>Lightroom is a complex and powerful photo editing and management tool used by many amateurs and professionals alike.</p>
+<p>While there is definitely a &quot;learning curve&quot; involved, you can easily learn a &quot;basic subset&quot; of its capabilities, sufficient for your initial needs. There are many excellent books (see our References) and web tutorials available. <strong>Name some tutorials</strong>.</p>
+<h2 id="lightroom-catalogs"><span class="header-section-number">6.1</span> Lightroom Catalogs</h2>
+<p>In order to work with photos in Lightroom, they must first be &quot;imported&quot;.</p>
+<p>Lightroom maintains a catalog (database) of all imported photos. This catalog is stored in your &quot;<code>Pictures/Lightroom</code>&quot; folder in your home directory on your laptop, or if you have followed the instructions above about moving your Lightroom Catalog, then the catalog is stored under &quot;'photos-abc-one/lightroom/catalog&quot;</p>
+<p>For each imported photo, the catalog remembers 1. where that photo is stored in your file system (which may be on your laptop's disk or on an external hard drive), 2. the original &quot;File Name&quot; for that photo (after any renaming is applied on import) 3. a &quot;preview&quot; of the photo (a reduced-resolution copy), and 4. what edits and modifications have been made to the photo.</p>
+<p>It is important to know that Lightroom <strong>does not actually change the imported photo when edits are made</strong>. Lightroom merely keeps in the catalog a history of the editing commands that have been specified for that photo.</p>
+<p>This means that edited photo does not actually exist as such in your file system. Lightroom can re-created the edited photo at any time, though, by taking the imported photo (which is stored on disk as it was originally imported) and then re-applying the history of editing command (from the catalog) to the photo.</p>
+<p>You can, however, ask Lightroom to ``export'' the actual edited photos. You may wish to do so, for example, to create a folder of photos to move to your iPhone to show others.</p>
+<p>The way Lightroom uses catalogs also means that if you wish to move imported photos around, you should do so <em>within Lightroom</em> rather than by using Finder. If you use Finder, the Lightroom catalog will lose track of where the imported photo is stored. (There is a way to correct this problem, if it occurs.)</p>
+<p>While Lightroom is capable of having more than one catalog, <strong>we strongly recommend that you have only one Lightroom catalog</strong>. (IF you read any book on Lightroom, this is their #1 piece of advice.)</p>
+<p>This one catalog can keep track of those imported photos stored on your laptop, in folder</p>
+<blockquote>
+<p><code>photos-abc-one/lightroom</code></p>
+</blockquote>
+<p>and also keep track of the photos store on your external hard drive, in the folder</p>
+<blockquote>
+<p><code>photos-abc-two/lightroom</code></p>
+</blockquote>
+<p>That is, the one lightroom catalog can keep track of photos that live in different folders, even if those folders are on different disks, some of which may be external.</p>
+<p>If you have photos on an external hard drive managed by Lightroom, but the hard drive is not attached to your laptop, you will be able to see the photo previews, but not the full-resolution versions of the photo. You will also not be able to edit the photos (unless your previews are &quot;Smart Previews&quot;, a new Lightroom feature).</p>
+<p>Your Lightroom catalog is obviously very important! You should make sure that it is backed up regularly (say by using Crashplan to back up all of your laptop files). (Note: When you exit Lightroom, it may ask if you wish to make a backup copy of your catalog. This is generally a good idea, but note that this backup made by Lightroom is <em>on the same hard disk</em> as the original catalog. So, if you laptop dies a horrible death, you lose not only your Lightroom catalog, but also this backup. That is why you need to back up the catalog to an external hard drive (say using Time Machine) or to an online backup service (like Crashplan).)</p>
+<p>You can start working with your catalog in the default location (in the Pictures/Lightroom folder in your home directory). But we recommend moving it to a folder <code>photos-abc-one/lightroom/catalog</code>, so that any backup of your <code>photos-abc-one</code> folder will also back up your lightroom catalog. Thus, your <code>photos-abc-one/lightroom</code> folder will contain the following subfolders:</p>
+<ul>
+<li><p><code>catalog</code> -- the main catalog for your use of lightroom, which may refer both to other folders in <code>photos-abc-one/lightroom</code>, and to folders in <code>photos-abc-two/lightroom</code>.</p></li>
+<li><p>other folders to contain photos on your laptop managed by lightroom, such as any 'presets' you may use or have downloaded</p></li>
+</ul>
+<p>Note that <code>photos-abc-two/lightroom</code> does <em>not</em> contain a <code>catalog</code> subfolder; there is only one lightroom catalog, and it lives in <code>photos-abc-one/lightroom/catalog</code>.</p>
+<p>To move your catalog, move the files</p>
+<blockquote>
+<p><code>Pictures/Lightroom 5 Catalog Previews.lrdata</code></p>
+</blockquote>
+<blockquote>
+<p><code>Pictures/Lightroom 5 Catalog Smart Previews.lrdata</code></p>
+</blockquote>
+<blockquote>
+<p><code>Pictures/Lightroom 5 Catalog.lrcat</code></p>
+</blockquote>
+<p>from the Pictures directory to your <code>photos-abc-one/lightroom-catalog</code> directory. Then, the next time you start up lightroom, it will ask you where you catalog has gone to. Tell it the location of the last of these three files.</p>
+<p></p>
+<h1 id="moving-photos-to-your-laptop"><span class="header-section-number">7</span> Moving photos to your laptop</h1>
+<p>This section describes how to move photos or folders of photos to your laptop for storage and editing.</p>
+<h2 id="moving-photos-from-your-digital-camera-to-your-mac-laptop"><span class="header-section-number">7.1</span> Moving photos from your digital camera to your mac laptop</h2>
+<ul>
+<li><p>Use the laptop SD card reader, or use a USB card reader.</p>
+<p>You can probably just remove the SD and/or CF card from your camera, and insert it into your laptop in the appropriate slot.</p>
+<p>If your laptop does not have a slot for memory cards, we recommend a USB-based memory card reader such as:</p>
+<blockquote>
+<p><a href="http://www.amazon.com/Anker%C2%AE-Multi--4-Slots-High-Speed-Support/dp/B0062EUE54">http://www.amazon.com/Anker%C2%AE-Multi--4-Slots-High-Speed-Support/dp/B0062EUE54</a></p>
+</blockquote>
+<p>Either way, your laptop is now ready to read the SD card and to copy the images it contains to your laptop.</p></li>
+<li><p>We recommend using Lightroom to import the new photos from your camera card.</p>
+<p>You can have the photos organized into folders by date, and then rename the folders as desired. You can also merge folders by dragging the photos from one folder to another within Lightroom after import, being sure to &quot;grab&quot; the photo(s) being moved from the middle of the thumbnail, not the edge of the grid square for the photo. Sometimes Lightroom doesn't show the SD card right away, and you need to remove it and re-insert it.</p>
+<p>It is probably helpful to at least start a new folder on your DSLR after each import.</p>
+<p>Also discuss problem of deleting from disk, then re-importing if you haven't erased your SD card (images re-appear in your catalog).</p>
+<p>** This last part needs a clear philosophy. I recommend importing, backing up and then deleting everything from the SD or CF card. Keep it simple. **</p>
+<p>** We need to say more about the how to use Lightroom &quot;Import&quot; most effectively. **</p>
+<p>It probably makes the most sense <em>not</em> to have any &quot;File Renaming&quot; applied on import to Lightroom, so that the Lightroom Catalog will accurately remember the original name the file had before it was imported. (Do the renaming <em>after</em> the photos are imported; then lightroom will give the files new names, but still remember the original names accurately.)</p></li>
+<li><p>What about deleting photos from SD card or iPhone after moving them?</p>
+<p>Some people keep pictures on their SD/CF cards, and just buy new cards each time one fills up. This is not the cheapest way to backup pictures, and small cards are easy to lose.</p></li>
+</ul>
+<h2 id="moving-photos-from-your-iphone-to-your-laptop"><span class="header-section-number">7.2</span> Moving photos from your iPhone to your laptop</h2>
+<ul>
+<li><p>The easiest way to move photos from your iPhone to your laptop is to use Lightroom.</p>
+<p>Just attach your iPhone to your laptop with your USB cable, and your iPhone will show up as an option (on the left panel) when you request an Import.</p>
+<p>(A nice thing about using Lightroom to import Photos from your iPhone is that it isn't affected by the recent changes Apple made in ios8, which eliminated the Camera Roll from visibility to many apps. Lightroom doesn't however, show you any of the other folders that may be present on the iPhone, so you may wish to use another import option if you wish to import from a folder other than Camera Roll. Note, however, that the other folders are of necessity all subsets of Camera Roll anyway...)</p>
+<p>(Note that Lightroom failed to import seven items from the iPhone, with extension &quot;<code>.AAE</code>&quot;. What are these? Perhaps screenshots or panoramas??)</p></li>
+<li><p>Discuss &quot;Lightroom Mobile&quot; here??</p>
+<p>Lightroom Mobile allows for automatic uploading of photos from the Camera Roll of your iPhone. (Haven't tested it yet...)</p>
+<p><a href="http://www.jkost.com/lightroom.html">http://www.jkost.com/lightroom.html</a> (See Lightroom Mobile section for five videos.)</p></li>
+<li><p>Another easy way to move pictures directly from your phone to your laptop is to use the program “Image Capture” which is already on your MAC.</p>
+<p>Once you then attach your phone to the computer, you will be presented with all of the media files (pictures and movies) on your phone's Camera Roll. (There doesn't seem to be any access to the Photostream with the Image Capture interface, unlike Phone View. But this is just as well, perhaps, since the PhotoStream images are usually reduced resolution.)</p>
+<p>You can select ALL or a few of the pictures and then download them into a folder of your choosing.</p></li>
+<li><p>A third convenient way to use the program PhotoSync:</p>
+<blockquote>
+<p><a href="https://itunes.apple.com/app/id415850124">https://itunes.apple.com/app/id415850124</a></p>
+</blockquote>
+<p>This works wirelessly, and very well.</p></li>
+<li><p>Other reasonable possibilities:</p>
+<ul>
+<li><p>You might not want your iPhone pictures on your laptop, but would rather store them in the cloud. If you choose to do this then download and install the Google Plus App from the App Store. Sign in with your google account (or create one).</p>
+<p>Once you open the Google Plus App, you will see three horizontal bars on the top left. Click on that, and then click on the “Gear” icon close to the top right of the next menu. Navigate to “Camera and Photos”: Turn “Auto Backup” to “ON”, turn Auto Enhance to “OFF”, Turn “Auto Awesome: to “ON”.</p>
+<p>When you click on “Auto Backup” turn “ON” Full size backups: Under the menu “When to back up photos,” unless you have an unlimited DATA plan, choose “Over Wifi Only” and do the same for “When to back up Videos.”</p>
+<p>If you are setting this up the first time, and are attached to a WiFi network, run the “Back up all photos and Videos” — this will take some time but will get you started. Now, each time you are on a Wifi, your pictures will backup. If you take a lot of photos, open google+ on a regular basis to get the backup started.</p>
+<p>You will now have Google+ access to these photos. There are many benefits to having your pictures here. (1) you will always have access to these photos, and (2) google makes it easy to share via email etc…</p>
+<p>You can do this in <em>addition</em> to backing up directly to your laptop.</p>
+<p>[STILL TO DISCUSS/CHECK: THIS MAY NOT CATCH PHOTOS YOU COPY FROM YOUR MESSAGES, IF THE AUTO-BACKUP HITS BEFORE YOU COPY THE PHOTOS FROM MESSAGES TO YOUR CAMERA ROLL. Perhaps this is wrong, and auto-backup gets them all... ?? It does say in the google plus documentation that it also gets photos copied from other apps... ][If this is correct, you still have a problem of going back into your camera roll to find the photos that were copied over from your messages, and individually uploading them to google. Ugh... This is one reason why auto-backup may not be so cool. Also: doesn't auto-backup put photos on google+, not gdrive???]</p></li>
+</ul></li>
+</ul>
+<p></p>
+<h1 id="editing-photos-on-your-laptop-with-lightroom."><span class="header-section-number">8</span> Editing photos on your laptop with Lightroom.</h1>
+<ul>
+<li><p>We recommend Lightroom for editing.</p></li>
+<li><p>You can rename files within a folder by selecting (in Library) mode the desired files (e.g. all of them with Command-A), then selecting Rename Photos from the Library Menu. This is a convenient way to enforce our rule that the photo filename should be the same as the folder name, followed by a sequence number or the original image number. (Note that this option has &quot;Folder Name&quot; as an option.)</p></li>
+<li><p>These notes refer to Lightroom 5.6, the latest version available at the time of writing.</p></li>
+<li><p>Moving photos between your laptop and your external hard drive.</p>
+<p>Lightroom makes this easy using the Library module, at least for lightroom-managed folders.</p></li>
+<li><p>Discuss what you might want to do with metadata (exif information)</p></li>
+<li><p>There is a fairly steep learning curve for Lightroom.</p>
+<p><a href="http://digital-photography-school.com/warning-dont-make-these-5-mistakes-in-lightroom/">http://digital-photography-school.com/warning-dont-make-these-5-mistakes-in-lightroom/</a></p></li>
+<li><p>Find some good Lightroom tutorials and study them.</p>
+<p>Adobe provides some <a href="https://helpx.adobe.com/lightroom/how-to/manage-all-your-photos.html">introductory Lightroom tutorials here</a>.</p></li>
+</ul>
+<p></p>
+<h1 id="sharing-your-photos-with-others."><span class="header-section-number">9</span> Sharing your photos with others.</h1>
+<p>Distinguish sharing/viewing from sharing/downloading?</p>
+<h2 id="displaying-photos-on-your-laptop-iphone-or-through-the-web."><span class="header-section-number">9.1</span> Displaying photos on your laptop, iPhone, or through the web.</h2>
+<h3 id="exporting-a-final-set-of-photos-from-lightroom."><span class="header-section-number">9.1.1</span> Exporting a final set of photos from Lightroom.</h3>
+<pre><code>In the Library module, select the photos to be exported, the click Export (bottom
+of the left panel).
+
+Note that you can export either the edited versions (the default)
+or the originals.  (To export the originals, on the Export dialogue panel
+under File Settings, select &quot;Original&quot; for the Image Format.  This will
+ignore the photo&#39;s edit history and export the photo as originally imported.)
+
+Note that in Lightroom&#39;s Library module, when working on a folder of photos, not
+only select the photos to be exported, but also select the order in which they are
+to be presented.  You can do this using the &quot;drag and drop&quot; capability on the filmstrip
+at the bottom of the screen.  (The View Menu Option, Sort choice, &quot;Custom Order&quot; 
+will also set this up.)  (Clicking the small triangle on the bottom center of the 
+screen will bring up the filmstrip.)</code></pre>
+<h3 id="displaying-photos-on-mac-laptop-of-photos-stored-on-laptop-or-on-external-hard-drive."><span class="header-section-number">9.1.2</span> Displaying photos on mac laptop of photos stored on laptop, or on external hard drive.</h3>
+<ul>
+<li><p>We presume you want to display a slideshow for one or more photos.</p></li>
+<li><p>If the photos are on an external hard drive or USB drive, connect it to the laptop.</p></li>
+<li><p>Use Finder to navigate to the folder containing the photos you want to show.</p></li>
+<li><p>Select photo(s) you want to show. (E.g. Command-A to select all photos in the current folder. Or click on the first photo you want to show, and Shift-click on the last photo you want to show, to select a range of photos.)</p></li>
+<li><p>Do Option-Space to start slideshow of the selected photos.</p></li>
+<li><p>Use space or right-arrow to advance; left-arrow to go back; ESC to quit.</p></li>
+<li><p>See <a href="http://osxdaily.com/2012/09/06/8-tricks-mac-os-x-full-screen-slideshow">Slideshow using OS X Finder</a> .</p></li>
+</ul>
+<h3 id="slideshow-on-iphone"><span class="header-section-number">9.1.3</span> Slideshow on iPhone</h3>
+<ul>
+<li><p>The simplest way to have a slideshow on your iPhone is to have the desired photos in a single album (folder) on the iPhone.</p>
+<p>To create a folder for your photos on your iPhone, open your &quot;Photos&quot; folder. This opens on the &quot;Albums&quot; page. Click the &quot;+&quot; in the upper-left hand corner of this page to create a new Album.</p>
+<p>You can then copy pictures from your Camera Roll into your new album.</p>
+<p>Note that the Camera Roll is the master list of photos actually on your phone. Albums are just lists of indices of photos from the Camera Roll.</p>
+<p>Therefore, copying a photo from the Camera Roll to an album leaves it in the Camera Roll. Deleting a photo from an Album just deletes it from the album, but the Camera Roll is unaffected. And deleting a Photo from the Camera Roll will delete it from all albums that contain it.</p>
+<p>Once your photos are in your new album, they are easy to display/show to others. You can click on the first photo in the album, then swipe left or right to advance to other photos.</p>
+<p>To have an automated slideshow: click on the first photo, click the &quot;sharing&quot; button (the box with the up-arrow leaving it), and then click on &quot;Slideshow&quot;.</p></li>
+<li><p>You can also use the program &quot;Photosync&quot; to easily move photos from a folder on your laptop to a (possibly new) album on your iPhone.</p></li>
+<li><p>Showing photos directly from Google Drive as a slideshow on your iPhone doesn't really work at all well, unless you use the Google Drive mobile app. (Using Chrome to access Google Drive doesn't really work on the iPhone.) Also, depending on the file sizes and connection speed, it may be slow to show images over Google Drive, or Google +. Thus, the easiest way to share is to have a few pictures on your phone. Since this is not possible for all of your pictures, find a mix of online and “on-phone” that works well for you.</p></li>
+<li><p>We note that Lightroom 5 does <em>not</em> provide a way to export a folder of photos to your iPhone, even though it <em>does</em> provide a way to import photos from your iPhone. (Too bad...)</p></li>
+</ul>
+<h2 id="sharing-photos-on-the-web-with-google-drive"><span class="header-section-number">9.2</span> Sharing photos on the web (with Google Drive)</h2>
+<ul>
+<li>You can install the Google Drive app for the iPhone, then open up and display photos from any desired folder.</li>
+</ul>
+<h2 id="organize-your-photos-into-folders-on-google-drive"><span class="header-section-number">9.3</span> Organize your photos into folders on Google Drive</h2>
+<h2 id="share-folders-from-drive-through-google"><span class="header-section-number">9.4</span> Share folders from Drive through Google+</h2>
+<p>Share with circles, invite friends by email, etc.</p>
+<h2 id="others-can-see-your-photos-that-youve-shared."><span class="header-section-number">9.5</span> Others can see your photos that you've shared.</h2>
+<h2 id="how-to-make-title-slides-add-captions-add-maps"><span class="header-section-number">9.6</span> How to make title slides, add captions; add maps</h2>
+<p>TBD</p>
+<h2 id="uploading-photos-from-your-laptop-to-your-iphone"><span class="header-section-number">9.7</span> Uploading photos from your laptop to your iPhone</h2>
+<p>You may wish to put photos on your iPhone to show to others.</p>
+<p>A good app for doing so is &quot;Photo Transfer app&quot;. It costs $3 for the iPhone, and is free for the laptop. You need to have both programs running at once, and on the same wifi network. (Sometimes a hotel network doesn't allow this sort of peer-to-peer transfer.) The two devices can discover each other, and then you can transfer pictures either way. If you transfer folders to your iPhone from your laptop to a particular Album on your iPhone, note that it will automatically go into your Camera Roll as well. (The Camera Roll is really the master list and storage location for all your photos, and the Albums are just list of references to photos in the Camera Roll.)</p>
+<p>** Check that this works with iox 8 !! **</p>
+<h2 id="check-out-lightroom-5.7-synced-collections"><span class="header-section-number">9.8</span> Check out Lightroom 5.7 Synced collections</h2>
+<p></p>
+<h1 id="backing-up-and-storing-your-photos."><span class="header-section-number">10</span> Backing up and storing your photos.</h1>
+<ul>
+<li><p>Discuss storage strategies in general?</p>
+<p>Note that there are at most three folders that need to be backed up:</p>
+<ul>
+<li><p>&quot;<code>photos-abc-one</code>&quot; from your laptop</p>
+<p>This folder will be backed up by Time Machine, Dropbox, and manually.</p></li>
+<li><p>&quot;<code>photos-abc-two</code>&quot; from your external hard drive</p>
+<p>This folder will be backed up by Crashplan and manually.</p></li>
+<li><p>&quot;<code>Pictures</code>&quot; from your laptop (this folder contains your Lightroom catalog).</p>
+<p>This folder will be backed up by Time Machine, and manually.</p></li>
+</ul></li>
+<li><p>Note somewhere that Photo Library on iPhone is <em>copy</em> of the folder on your laptop (at least for some versions of software).</p></li>
+</ul>
+<h2 id="a-backup-plan-to-follow"><span class="header-section-number">10.1</span> A backup plan to follow</h2>
+<p>We recommend a rigorous discipline for backing up your photos:</p>
+<h3 id="time-machine"><span class="header-section-number">10.1.1</span> Time Machine</h3>
+<ul>
+<li><p>We recommend using Time Machine on a regular basis to back up your entire laptop state. See, for example,</p>
+<blockquote>
+<p><a href="http://support.apple.com/kb/ht1427">http://support.apple.com/kb/ht1427</a></p>
+</blockquote>
+<p>Time Machine backups are just &quot;good hygiene&quot; when you are using a Mac. If you do this daily, or weekly, then you will lose at most one day's, or a week's worth of work if (when!) your laptop dies.</p>
+<p>Just plug in the hard drive you have dedicated for Time Machine backups, click &quot;back up now&quot; on the Time Machine icon pull-down menu, and let it go.</p>
+<p>Be sure to eject the drive before disconnecting it.</p></li>
+</ul>
+<h3 id="dropbox"><span class="header-section-number">10.1.2</span> Dropbox</h3>
+<ul>
+<li>We recommend using Dropbox, and placing the folder &quot;<code>photos-abc-one</code>&quot; in your Dropbox folder. Dropbox may be noticeably faster than CrashPlan at backing up your &quot;<code>photos-abc-one</code>&quot; folder (mostly because CrashPlan is also backing up your &quot;<code>photos-abc-two</code>&quot; folder), so using Dropbox may get your recent photos &quot;up into the cloud&quot; more quickly (but still automatically). Also, it is possible to show your photos from your phone using DropBox (although this may or may not be your favorite option; it may require that your phone be online to access these photos for display).</li>
+</ul>
+<h3 id="crashplan"><span class="header-section-number">10.1.3</span> Crashplan</h3>
+<ul>
+<li><p>We recommend using Crashplan for your online backup service.</p>
+<p>It is easy to use, allows for unlimited backups, and can back up folders from both your laptops internal hard drive, and also attached external hard drives (when they are attached).</p></li>
+<li><p>Have an account with Crashplan, and make sure that your folder <code>photos-pc</code> gets backed up automatically.</p>
+<p>Also make sure that the folder <code>photos-abc-two</code> (on your external hard drive of the same name) also gets backed up by Crashplan automatically.</p></li>
+</ul>
+<h3 id="manual-backups"><span class="header-section-number">10.1.4</span> Manual backups</h3>
+<ul>
+<li><p>Regularly back up (copy) the folder <code>photos-abc-one</code> onto the hard disk drive <code>photos-abc-one-two-backup</code>.</p></li>
+<li><p>Regularly backup (copy) the folder <code>photos-abc-two</code> from its external hard drive onto the hard disk drive <code>photos-abc-one-two-backup</code>.</p></li>
+<li><p>Periodically, replace the local hard drives <code>photos-abc-two</code> and <code>photos-abc-one-two-backup</code> with new ones. (The new ones should be given copies of the contents of their predecessors.) Send the old <code>photos-abc-one-two-backup</code> drive to a remote location (e.g. with a friend) for safe-keeping. Keep the old <code>photos-abc-two</code> in a box for safe-keeping, but label it as &quot;photos-abc-two retired (date)&quot;.</p></li>
+</ul>
+<h3 id="manually-making-a-backup-copy-of-a-folder"><span class="header-section-number">10.1.5</span> Manually Making a backup copy of a folder</h3>
+<p>The basic operation will be to make an exact copy of a folder <code>A/photos</code> in another location <code>B/photos</code>. (Perhaps these are on different drives.) We are only considering the case here that A/photos and B/photos are local folders, perhaps on an external hard drive; we are not considering online backup (to the cloud) here.</p>
+<p>For our example, we suppose that we have two hard drives, one named <code>photos-abc-two</code> and another named <code>photos-abc-one-two-backup</code>. The first contains a folder <code>photos-abc-two</code> that we wish to copy to the second.</p>
+<blockquote>
+<p><code>A</code> is <code>/Volumes/photos-abc-two/photos-abc-two</code></p>
+</blockquote>
+<blockquote>
+<p><code>B</code> is <code>/Volumes/photos-abc-one-two-backup/photos-abc-two</code></p>
+</blockquote>
+<p>There are two easy ways to accomplish this, using Finder or the Terminal command line.</p>
+<ol style="list-style-type: decimal">
+<li><p>Use the &quot;drag and drop&quot; operation in Finder to copy the folder <code>photos-abc-two</code> from position A to position B.</p></li>
+<li><p>Use Terminal to give a copy (cp) command of the form:</p>
+<blockquote>
+<p><code>cp -a /Volumes/photos-abc-two/photos-abc-two/ /Volumes/photos-abc-one-two-backup/photos-abc-two</code></p>
+</blockquote>
+<p>Here the <code>-a</code> switch means &quot;archive&quot;, which preserves file creation times and other attributes, causes cp to operate recursively (copy all subfolders as well), and causes cp to &quot;keep going&quot; if errors are encountered. The first folder name is the source (where you're copying from) and the second file name is the destination (where you're copying to).</p>
+<p>Timings: a 1TB photo library might take seven hours to back up with drag-and-drop or cp.</p></li>
+</ol>
+<h3 id="chronosync"><span class="header-section-number">10.1.6</span> ChronoSync</h3>
+<p>Econtechnologies ChronoSync app provides a much faster way to back up files than backing up manually, especially when not much has changed.</p>
+<p>This is an excellent program for doing backups, but the documentation is a bit confusing.</p>
+<p>If you want to make folder B be an exact copy of folder A:</p>
+<ul>
+<li><p>start a new synchronization document with ChronoSync</p></li>
+<li><p>make A the &quot;left target&quot;</p></li>
+<li><p>make B the &quot;right target&quot;</p></li>
+<li><p>choose operation &quot;mirror left-to-right&quot;</p></li>
+<li><p>check &quot;synchronize deletions&quot;</p></li>
+<li><p>On &quot;When deleting files&quot;, check &quot;Delete immediately&quot; or maybe &quot;Move to Archive&quot; (your choice). If you &quot;move to archive&quot;, deleted files will be stored in B subfolder &quot;<code>_Archived Items</code>&quot;.</p></li>
+<li><p>click &quot;Synchronize&quot;</p></li>
+</ul>
+<p><strong>Make very sure that you correctly get A to be your &quot;left&quot; target (the &quot;source&quot; for the backup operation), and B to be your &quot;right&quot; target (the &quot;destination&quot; for the backup operation).</strong> Otherwise the backup operation will work in reverse and you will lose data.</p>
+<p>Subsequent backups, using the same synchronization document, will be very fast, as only the differences will be copied.</p>
+<h2 id="verifying-that-a-copy-operation-operated-correctly"><span class="header-section-number">10.2</span> Verifying that a copy operation operated correctly</h2>
+<p>If you would like to check that <code>B/photos-abc-one</code> is an exact copy of <code>A/photos-abc-one</code>, you can use the following command on Terminal:</p>
+<blockquote>
+<p><code>diff -rq A/photos-abc-one B/photos-abc-one</code></p>
+</blockquote>
+<p>Here the &quot;<code>r</code>&quot; switch causes the comparison to be made recursively into subfolders, and the &quot;<code>q</code>&quot; switch causes <code>diff</code> to only report differences. If <code>diff</code> doesn't report anything, then the folders are identical. Because <code>diff</code> actually compares file contents, it can be considerably slower than actually making the backup.</p>
+<h1 id="when-you-outgrow-your-laptop"><span class="header-section-number">11</span> When you outgrow your laptop</h1>
+<h2 id="splitting-your-photos-abc-one-folder-into-two-parts"><span class="header-section-number">11.1</span> Splitting your &quot;<code>photos-abc-one</code>&quot; folder into two parts</h2>
+<ul>
+<li><p>add a &quot;<code>photos-abc-two</code>&quot; folder on an external hard drive</p></li>
+<li><p>mimic the same top-level folder hierarchy</p></li>
+<li><p>move some of your photos folders there</p></li>
+<li><p>Take a new external hard disk drive, and give it a name (using Finder) of <code>photos-abc-two</code>.</p>
+<p>Give this hard drive a single folder inside called <code>photos-abc-two</code>, and give this folder a set of subfolders with the same names as the subfolders of the <code>photos-abc-one</code> folder on your laptop.</p></li>
+<li><p>Our philosophy is that a folder of photos may move between your laptop folder &quot;<code>photos-abc-one</code>&quot; and your external hard drive folder &quot;<code>photos-abc-two</code>&quot;.<br />But it should only be in one of these places, so if you move it, delete the source folder after you create the new destination folder.</p>
+<p>You can also move folders between the subfolders described above, but again, a folder of photos should only be in one such subfolder.</p>
+<p>Thus, a folder of photos will only exist <em>once</em> among the folders in <code>photos-abc-one</code> and <code>photos-abc-two</code>. It may be moved around, but it won't be duplicated.</p>
+<p>In some sense, the <code>photos-abc-one</code> and <code>photos-abc-two</code> can be viewed as two (disjoint) parts of one big imaginary folder <code>photos-abc-master</code> that has been split into these two parts, the <code>photos-abc-one</code> part (on the laptop) and the <code>photos-abc-two</code> part, to accommodate the fact that your laptop isn't big enough to hold all of your photos.</p>
+<p>Of course, if your laptop <em>is</em> big enough to hold all of your photos, then you may not need the <code>-two</code> part at first.</p></li>
+</ul>
+<h1 id="other-tips-tricks-and-notes"><span class="header-section-number">12</span> Other tips, tricks, and notes</h1>
+<ul>
+<li><p>There is a nice plug-in for finding duplicate photos among those in your lightroom catalog, called &quot;Lightroom Duplicate Finder 2&quot;. It costs about (pounds)8.50.</p>
+<p><a href="http://www.lightroom-plugins.com/DupesIndex.php">http://www.lightroom-plugins.com/DupesIndex.php</a></p></li>
+<li><p>What about search? How would one search for photos with given EXIF tags, say?</p></li>
+<li><p>What about XMP sidecar files? (for extra meta-data??)</p></li>
+<li><p>Touchnote <a href="http://www.touchnote.com/">http://www.touchnote.com/</a> is an excellent service: you can upload a photo (and associated text) and have it sent as a postcard to anyone you like. Great way to share photos with someone who isn't particularly tech-savvy, or who might like a photo for the refrigerator door.</p></li>
+<li><p>We have used Pinhole Press <a href="https://pinholepress.com/">https://pinholepress.com/</a> to make a photo &quot;board book&quot; for a very young family member. It came out very nice!</p></li>
+<li><p>The mac program &quot;Graphic Converter&quot; (from Lemke) provides a multitude of capabilities for viewing photos, viewing exif information, converting graphics file formats, viewing slideshows, etc.</p>
+<p><a href="http://www.lemkesoft.de/en/image-editing-slideshow-browser-batch-conversion-metadata-and-more-on-your-mac/">http://www.lemkesoft.de/en/image-editing-slideshow-browser-batch-conversion-metadata-and-more-on-your-mac/</a></p>
+<p>Apparently this program can also import photos from your iPhone.</p>
+<p>Cost is around $30--$40.</p>
+<p>Lemke software also provide &quot;EXIF Sync&quot; for adjusting the exif time information inside each photo; this is useful when you have several cameras taking pictures of the same event, and you want to synchronize the time information in each photo to obtain a consistent chronological ordering.</p></li>
+<li><p>Flickr <a href="http://en.wikipedia.org/wiki/Flickr">http://en.wikipedia.org/wiki/Flickr</a> also offers 1TB storage for photos, plus their own mobile app.</p>
+<p>&quot;If you have a <em>free</em> Flickr account, no one (including you) can access your original file&quot; (copied from Wikipedia comparison of photo-sharing web sites: <a href="http://en.wikipedia.org/wiki/List_of_photo_sharing_websites#Comparison_of_photo-sharing_websites">http://en.wikipedia.org/wiki/List_of_photo_sharing_websites#Comparison_of_photo-sharing_websites</a> But this now seems to be FALSE (by experiment; I got the same photo when I downloaded it, and diff-ed it with the original I had uploaded.)</p>
+<p>Flickr will be updating its offerings in early 2015 to emphasize mobile:</p>
+<p><a href="http://www.dailydot.com/technology/flickr-20-under-20-php-java/">http://www.dailydot.com/technology/flickr-20-under-20-php-java/</a></p>
+<p>** Quote from Alex's email; edit ** &quot;One thing I do like about flickr is that if we &quot;Save Image&quot; to my camera roll from a picture sent to me by msg, then that photo is uploaded. If I do that with Google +, sometimes they are uploaded, sometimes not...or at least its not 100% clear if it is....&quot;</p></li>
+<li><p>Blipfoto (Andy Clark recommendation) has nice support for selling photos.</p></li>
+<li><p>Pinterest</p></li>
+<li><p>Tumblr</p></li>
+<li><p>Instagram</p></li>
+<li><p>WhatsApp</p></li>
+<li><p>SmugMug</p>
+<p>E.g. for Alexandra Boldyreva's gallery: http://www.smugmug.com/gallery/8517151_ADb7J#459905957_hkjd9</p>
+<p>Or for Peter Norvig's gallery: http://pn.smugmug.com/</p>
+<p>SmugMug also has a mobile app, and a Camera Awesome app.</p></li>
+<li><p>Photobucket</p></li>
+<li><p>ViewBook (suggested by Gretchen Ertl)</p>
+<p>http://www.viewbook.com/</p>
+<p>for display of albums/portfolios Priced at: $19/monthly or $190/yearly.</p></li>
+<li><p>Photomechanic (suggested by Gretchen Ertl)</p>
+<p>http://www.camerabits.com/products/ Priced at: $150</p></li>
+<li><p>Photoshelter Mentioned by Peter Krogh in the DAM book &quot;A professional photo online web service&quot;</p></li>
+</ul>
+<p></p>
+<p>Requirements for a good photo support system:</p>
+<ul>
+<li><p>Reliability</p></li>
+<li><p>Ability to upload folders</p></li>
+<li><p>Ability to order folders</p></li>
+<li><p>Ability to order pics within a folder</p></li>
+</ul>
+<p></p>
+<p>Also:</p>
+<ul>
+<li><p>keeping notes and a calendar about what you did</p></li>
+<li><p>Using Spotlight on your mac to search</p></li>
+</ul>
+<p></p>
+<h1 id="acknowledgments"><span class="header-section-number">13</span> Acknowledgments</h1>
+<p>Thanks to the following folks for helpful tips and feedback:</p>
+<ul>
+<li><p>Daniel Jackson</p></li>
+<li><p>Gretchen Ertl (for pointers to viewbook and photo mechanic)</p></li>
+</ul>
+<h1 id="references"><span class="header-section-number">14</span> References</h1>
+<ul>
+<li><p>Peter Krogh, <em>Organizing your photos with Lightroom 5.</em></p>
+<p>Excellent introduction to a lightroom-centric workflow.</p></li>
+<li><p>Scott Kelby. <em>The Adobe Photoshop Lightroom 5 book for digital photographers.</em></p>
+<p>Excellent introduction to Lightroom 5.</p></li>
+</ul>
+<h1 id="things-we-tried-that-we-liked-but-which-arent-part-of-our-recommended-workflow"><span class="header-section-number">15</span> Things we tried that we liked but which aren't part of our recommended workflow</h1>
+<h2 id="uploading-your-photos-to-google-drive"><span class="header-section-number">15.1</span> Uploading your photos to Google Drive</h2>
+<p>There are lots of &quot;cloud storage&quot; services: Google Drive, Microsoft's OneDrive, Dropbox, Box.com, Amazon's Cloud Storage, etc. This market will keep evolving, but for now, Google Drive seems a good choice:</p>
+<ul>
+<li>Pricing: You can get 1TB (one terabyte = 1000 gigabytes) for $10 /</li>
+<li>month. Integration with Google+: Exists, and is getting better,</li>
+<li>but has serious limitations and frustrations. Google + makes</li>
+<li>viewing a folder of pictures easy, however, it completely destroys</li>
+<li>the folder hierarchy you have created in Google Drive. All</li>
+<li>folders with pictures become “Albums” in Google +.</li>
+</ul>
+<p>We recommend paying for as much storage as you might need. You can upgrade your plan if necessary. (I currently have a 1TB, which is more than enough for me.)</p>
+<p>We do <em>not</em> recommend installing the Google Drive app on your laptop, as this would create a (very large) folder on your laptop for a copy of your Google Drive. Instead, only access Google Drive via the Web interface (drive.google.com).</p>
+<p>... details on uploading photos.</p>
+<p>When uploading pictures to Google Drive, set it up just before leaving the house for a while or for overnight. Depending on how much data you are uploading, this can slowdown your network connection significantly.</p>
+<p>*** Make Note about upload failures***</p>
+<p>We recommend using Insync <a href="https://www.insynchq.com/">https://www.insynchq.com/</a> to keep your Google Drive content (in the cloud) synchronized with your Google Drive content (on your external hard drive). The Insync Google Drive client is more capable than the standard google drive client, and can sync with a folder that is on an external hard drive (which the google drive client can not).</p>
+<p>Note: I haven't really tried insync yet -- this is still &quot;to do&quot;...</p>
+<h2 id="photomechanic"><span class="header-section-number">15.2</span> Photomechanic</h2>
+<p><a href="http://wiki.camerabits.com/en/index.php?title=User_Manual_Flat_View">http://wiki.camerabits.com/en/index.php?title=User_Manual_Flat_View</a></p>
+<pre><code>(In Photo Mechanic, you can have a template for renaming photos, of the form
+&quot;`{folder}-{frame4}`&#39;&#39; (which gives a photo the name of its folder, plus a hyphen and
+the last four digits that the photo had in its name already), or 
+&quot;`{folder}-{seqn}`&quot; (which gives a photo the name of its folder, plus a hyphen and
+the a sequence number that you can initialize to arbitrary length and initial
+values, but then which increments by one).)</code></pre>
+<p>Note that Photo Mechanic might create sidecar files, if you add attributes to pictures.</p>
+<p></p>
+<h1 id="things-we-tried-that-were-not-recommending-this-section-may-be-ignored-deleted"><span class="header-section-number">16</span> Things we tried that we're not recommending (this section may be ignored / deleted)</h1>
+<h2 id="sync-folders-pro."><span class="header-section-number">16.1</span> Sync Folders Pro.</h2>
+<ul>
+<li><p><strong>Disregard this section on Sync Folders Pro for now, as we couldn't get it to work.</strong></p></li>
+<li><p>create a new &quot;sync task&quot; with source A/photos and destination B/photos.</p></li>
+<li><p>make sure that A is readable and B is readable and writable. Go to &quot;GetInfo&quot; for drive A or drive B, and check &quot;Ignore ownership on this volume&quot; if not already checked. You might also ensure that &quot;everyone&quot; has Read &amp; Write access on the same panel, although this step is probably not needed if the &quot;Ignore ownership&quot; box is checked. Note that you should use the &quot;gear pull-down&quot; and click on &quot;apply to enclosed items&quot; to make the permission changes effective.</p></li>
+<li><p>Check that the target drive has enough space. Empty the Trash on this volume if needed.</p></li>
+<li><p>Make sure no other applications are using folders in A/photos or B/photos so that they are &quot;locked&quot; and inaccessible to Sync Folders Pro.</p></li>
+<li><p>Set the &quot;Sync Mode&quot; to &quot;A =&gt; B&quot; (make an exact copy of A on B). You probably don't need to check &quot;Move Deleted Files to _DelSyncFiles&quot;, although it doesn't hurt, unless space is tight.</p></li>
+<li><p>When the task is completed, check that the Sync Folder Pro icon on the top menu bar is not red (indicating errors or problems). You should also check the &quot;Log&quot; panel to see if any errors were reported. (On this panel you may wish to check &quot;Log Errors&quot; before starting, rather than &quot;Log All Events&quot;, to keep the size of the log reasonable.)</p></li>
+<li><p>If you have problems, you can write to the support for Sync Folders Pro; they are very responsive.</p></li>
+</ul>
+<p>Sync Folders Pro will be the fastest approach, as it doesn't copy files needlessly (if they are already present in B, they needn't be copied again.) Sync Folders Pro will consider two files to be identical if they have the same size and last modification date; Sync Folders Pro doesn't actually compare contents of two files (unless you set a switch for it to do so, which takes extra time).</p>
+<p>Sync Folders Pro appeared to take less than one hour for 1TB data (but actually failed to copy anything). Sync Folders Pro can be set up to run automatically at a certain time (e.g. in the middle of the night).)</p>
+<h2 id="phoneview"><span class="header-section-number">16.2</span> PhoneView</h2>
+<ul>
+<li><p>You can also move photos from your iPhone to your laptop using the PhoneView app.</p>
+<p><a href="http://download.cnet.com/PhoneView/3000-18511_4-165681.html">Phone View</a></p>
+<p>Seems to work well. It costs about $30.</p>
+<p>Do <em>NOT</em> download this app from CNET, however! The CNET installer app is malware. It will change your default search engine, delete tabs from your browser, install browser extensions, and who knows what else! Use the ecamm download instead:</p>
+<p><a href="http://www.ecamm.com/mac/phoneview/">ecamm phoneview site</a>.</p>
+<p>The Phone View app lets you access files on your iPhone, and copy them to your laptop. Just attach the iPhone to the laptop with a USB cord, and start Phone View. You can see &quot;Photos&quot; and &quot;Messages&quot; as options on the left panel.</p>
+<p>You can select photos to copy using the &quot;Photos&quot; button. Select the photos you wish to copy first. After selecting &quot;Photos&quot;, you will want to choose &quot;Camera Roll&quot; as the iPhone folder to copy from. (You can also download from &quot;PhotoStream&quot; if you like, which is an option that ImageCapture doesn't provide. However, you probably don't want to do this, since the PhotoStream images are typically reduced resolution.)</p>
+<p>Then you can use Command-A to select all photos, click on individual photos to select them one at a time, use Shift-click (after clicking on the first one) on the last photo to select a range of them, etc., as usual for Finder-like selection.</p>
+<p>You may be able to copy the entire folder just by selecting the folder (e.g. Camera Roll). (Haven't tested this.)</p>
+<p>You can delete photos from your iPhone in a similar manner through the Phone View app.</p></li>
+</ul>
+<h2 id="iphone-photostream-and-icloud."><span class="header-section-number">16.3</span> iPhone Photostream and iCloud.</h2>
+<p>We don't recommend using Photostream at all. Just turn it off, if it is on. Keep things simple...</p>
+<p>There is separate storage for PhotoStream and for CameraRoll on your iPhone. Photos are stored twice, and have separate IMG_nnnn filenames. Moreover, note that photos are generally stored in PhotoStream at <em>reduced</em> <em>resolution</em>. Apple also has a &quot;Photo Sharing&quot; option that allows you to create photostream for particular events or particular groups of friends to share with. We haven't explored this option at all (and probably won't), although it may suit your taste...</p>
+</body>
+</html>

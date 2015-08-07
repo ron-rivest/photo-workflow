@@ -14,3 +14,6 @@ to questions such as:
 The notes are not intended to be comprehensive, but only to provide
 "one way" of doing things.  The suggestions made here may rapidly become
 obsolete, as in this area technology is changing rapidly.
+
+Note: "pandoc" is used to produce pdf and html files from photoflow.text
+
